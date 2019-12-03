@@ -3,16 +3,19 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Hello World!"/> -->
     <HelloWorld msg='<span style = "color:red">Hello World!</span>'/>
+    <ev/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import './components/n'
+import ev from './components/events'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    ev
   }
 }
 </script>
