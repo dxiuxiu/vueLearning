@@ -19,6 +19,46 @@
     <!-- 自定义指令 -->
     <p v-n ="3"></p>
 
+
+    <div>
+      <!-- 表达式实现 -->
+      <!-- 我借你{{money}},你还我{{a}},还剩{{money-a}} -->
+
+      <!-- 计算属性实现 -->
+      我借你{{money}},你还我{{a}},还剩{{b}}
+    </div>
+
+    <!-- vue 类与样式 -->
+    <div :class ="[a1,a2]">
+      vue 类与样式测试 1
+    </div>
+    <div :class ="{'test-1':a3}">
+      vue 类与样式测试 2
+    </div>
+    
+    <!-- div[:class="obj"] -->
+    <div :class="obj">
+      vue 类与样式测试 3
+    </div>
+
+    <!-- for 循环 -->
+    <ul>
+      <!-- <li v-for="item in list" :key="item">
+        {{item}}
+      </li> -->
+      <li v-for="(item,index) in list" :key="item">
+        item = {{item}},
+        index = {{index}}
+      </li>
+
+      <!-- ul>li 分组-->
+      <ul>
+        <template v-for="(item) in list">
+          hello <li :key="item">{{item}}</li>
+        </template>
+      </ul>
+    </ul>
+
   </div>
 </template>
 
@@ -34,8 +74,22 @@ export default {
       msg1: '<span style = "color:red">Hello World!</span>',
       id: "id",
       num1: 0,
-      seen:false
+      seen:false,
+      money:100,
+      a:1,
+      a1:"test1",
+      a2:"test2",
+      a3:false,
+      obj:{
+        "test-1":true
+      },
+      list:['a','b','c','d']
     };
+  },
+  computed: {
+    b:function(){
+      return this.money-this.a
+    }
   }
   // data:{
   //   msg:1
