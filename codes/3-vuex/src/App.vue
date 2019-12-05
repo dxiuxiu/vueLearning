@@ -12,9 +12,12 @@
       <footer slot ="footer">尾部</footer>
     </com>
 
-    <!--  -->
-    <p>vuex 使用演示</p>
-    <vuexx/>
+    <!-- 简单 vuex 演示 -->
+    <!-- <p>vuex 使用演示</p>
+    <vuexx/> -->
+
+    <pagea/>
+    <pageb/>
   </div>
 </template>
 
@@ -23,14 +26,19 @@ import HelloWorld from './components/HelloWorld.vue'
 import './components/n'
 import ev from './components/events'
 import com from './components/com'
-import vuexx from './components/vuex'
+// import vuexx from './components/vuex'
+
+import pagea from './components/a'
+import pageb from './components/b'
 export default {
   name: 'app',
   components: {
     HelloWorld,
     ev,
     com,
-    vuexx
+    // vuexx,
+    pagea,
+    pageb
   },
   data () {
     return {
