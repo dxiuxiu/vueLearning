@@ -10,7 +10,7 @@
 
 import {mapActions} from 'vuex'
 export default {
-     methods: mapActions('count',['add','reduce']),
+    methods: mapActions('count',['add','reduce']),
    data() {
       return {
       }

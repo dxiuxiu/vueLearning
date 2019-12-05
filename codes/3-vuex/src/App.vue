@@ -2,20 +2,12 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Hello World!"/> -->
-    <HelloWorld msg='<span style = "color:red">Hello World!</span>'/>
-    <ev/>
-    <!-- <com age = "19"/> -->
-
-    <!-- 向子组件传递数据 -->
-    <com :age = "parentAge" @patch = "msg">
-      <header slot ="header">头部</header>
-      <footer slot ="footer">尾部</footer>
-    </com>
-
+    <HelloWorld/>
     <!-- 简单 vuex 演示 -->
     <!-- <p>vuex 使用演示</p>
     <vuexx/> -->
 
+    <!-- vuex 进阶演示 -->
     <pagea/>
     <pageb/>
   </div>
@@ -23,9 +15,6 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import './components/n'
-import ev from './components/events'
-import com from './components/com'
 // import vuexx from './components/vuex'
 
 import pagea from './components/a'
@@ -34,8 +23,6 @@ export default {
   name: 'app',
   components: {
     HelloWorld,
-    ev,
-    com,
     // vuexx,
     pagea,
     pageb
