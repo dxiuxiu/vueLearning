@@ -4,8 +4,8 @@ const state = {
 }
 
 const mutations = {
-    add(state){
-        state.count++
+    add(state,param){
+        state.count = state.count+param
     },
 
     reduce(state){
@@ -15,8 +15,8 @@ const mutations = {
 
 /** actions 中通过 commit 触发 mutations 中的数据*/
 const actions = {
-    add:({commit})=>{
-        commit('add')
+    add:({commit},param)=>{
+        commit('add',param)
     },
     reduce:({commit}) =>{
         commit('reduce')

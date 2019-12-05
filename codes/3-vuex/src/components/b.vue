@@ -2,7 +2,7 @@
     <div class="" id="">
         pageB {{$store.state.count.count}}
 
-         <button @click = "add">count 增加</button>
+         <button @click = "add(2)">count 增加</button>
         <button @click = "reduce">count 减少</button>
     </div>
 </template>
